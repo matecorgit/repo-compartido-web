@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página de Prueba - Colaboración en GitHub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🌟 Proyecto Web Compartido</h1>
+      <p>Colaborando con HTML, CSS y JavaScript en GitHub</p>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section id="inicio">
+      <h2>🚀 Bienvenido</h2>
+      <p>Esta página fue creada como práctica de colaboración entre desarrolladores usando GitHub. Puedes contribuir, editar y publicar cambios directamente desde el repositorio.</p>
+      <button onclick="mostrarMensaje()">Haz clic para saludar</button>
+      <p id="mensaje"></p>
+    </section>
+
+    <section id="equipo">
+      <h2>👥 Nuestro Equipo</h2>
+      <ul class="equipo-lista">
+        <li>💻 Juan - Frontend</li>
+        <li>🛠️ Ana - Backend</li>
+        <li>🎨 Luisa - Diseño</li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h2>📬 Contacto</h2>
+      <form onsubmit="enviarFormulario(event)">
+        <input type="text" placeholder="Tu nombre" required />
+        <input type="email" placeholder="Tu correo" required />
+        <textarea placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Repositorio en GitHub • Proyecto de práctica compartida</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -2,56 +2,69 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Página de Prueba - Colaboración en GitHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Proyecto Web Compartido</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
+  <header class="header">
     <div class="container">
-      <h1>🌟 Proyecto Web Compartido</h1>
-      <p>Colaborando con HTML, CSS y JavaScript en GitHub</p>
+      <h1>🌊 Proyecto Web Compartido</h1>
+      <p>Colaborando con HTML, CSS y JavaScript</p>
     </div>
   </header>
 
   <nav class="navbar">
     <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#equipo">Equipo</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#inicio" class="nav-link">Inicio</a></li>
+      <li><a href="#equipo" class="nav-link">Equipo</a></li>
+      <li><a href="#contacto" class="nav-link">Contacto</a></li>
     </ul>
   </nav>
 
   <main class="container">
-    <section id="inicio">
-      <h2>🚀 Bienvenido</h2>
-      <p>Esta página fue creada como práctica de colaboración entre desarrolladores usando GitHub. Puedes contribuir, editar y publicar cambios directamente desde el repositorio.</p>
-      <button onclick="mostrarMensaje()">Haz clic para saludar</button>
-      <p id="mensaje"></p>
+    <section id="inicio" class="hero">
+      <h2>Bienvenido 👋</h2>
+      <p>Este proyecto es una práctica colaborativa para crear una página web usando GitHub.</p>
+      <button onclick="mostrarMensaje()" class="btn-primary">Saludar</button>
+      <p id="mensaje" class="mensaje"></p>
     </section>
 
-    <section id="equipo">
-      <h2>👥 Nuestro Equipo</h2>
-      <ul class="equipo-lista">
-        <li>💻 Juan - Frontend</li>
-        <li>🛠️ Ana - Backend</li>
-        <li>🎨 Luisa - Diseño</li>
-      </ul>
+    <section id="equipo" class="team-section">
+      <h2>Nuestro Equipo</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="avatar">💻</div>
+          <h3>Juan</h3>
+          <p>Frontend Developer</p>
+        </div>
+        <div class="card">
+          <div class="avatar">🛠️</div>
+          <h3>Ana</h3>
+          <p>Backend Developer</p>
+        </div>
+        <div class="card">
+          <div class="avatar">🎨</div>
+          <h3>Luisa</h3>
+          <p>Diseñadora</p>
+        </div>
+      </div>
     </section>
 
-    <section id="contacto">
-      <h2>📬 Contacto</h2>
-      <form onsubmit="enviarFormulario(event)">
+    <section id="contacto" class="contact-section">
+      <h2>Contacto</h2>
+      <form onsubmit="enviarFormulario(event)" class="contact-form">
         <input type="text" placeholder="Tu nombre" required />
         <input type="email" placeholder="Tu correo" required />
         <textarea placeholder="Tu mensaje" required></textarea>
-        <button type="submit">Enviar</button>
+        <button type="submit" class="btn-primary">Enviar</button>
       </form>
     </section>
   </main>
 
-  <footer>
-    <p>Repositorio en GitHub • Proyecto de práctica compartida</p>
+  <footer class="footer">
+    <p>© 2025 Proyecto Web Compartido</p>
   </footer>
 
   <script src="script.js"></script>

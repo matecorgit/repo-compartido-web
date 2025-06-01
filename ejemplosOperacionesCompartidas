@@ -1,0 +1,26 @@
+Ejemplo 1: Añadir una nueva sección “Testimonios”
+Tú: Creas un issue en GitHub que diga “Agregar sección de testimonios al final de la página”.
+
+Tu colaborador: Clona el repo, crea una rama nueva feature/testimonios, añade el HTML y CSS para esa sección, hace commit y push.
+
+Luego: Hace un Pull Request para que revises los cambios y los fusiones al branch principal.
+
+Resultado: La página ahora tiene una sección de testimonios con estilo acorde.
+
+Ejemplo 2: Mejorar el diseño del formulario de contacto
+Tu colaborador: Sugiere por chat o issue mejorar el formulario con validación extra y un diseño más moderno.
+
+Tú: Creas una rama feature/contact-form-enhancements para implementar las validaciones con JavaScript y actualizar estilos CSS.
+
+Ambos: Revisan los commits y prueban localmente.
+
+Después: Hacen merge del PR y suben los cambios al repo principal.
+
+Ejemplo 3: Corregir un error en el botón “Saludar”
+Tu colaborador: Nota que el botón de saludar no funciona en móviles, abre un issue.
+
+Tú: Investigas el problema y corriges el código JavaScript en la función mostrarMensaje().
+
+Haces commit en una rama de hotfix, haces push y abres un PR.
+
+Después: El colaborador revisa, aprueba, y haces merge. El botón funciona bien para todos.

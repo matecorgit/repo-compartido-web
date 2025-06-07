@@ -10,55 +10,64 @@
 <body>
   <header class="header">
     <div class="container">
-      <h1>🌊 Proyecto Web Compartido</h1>
-      <p>Colaborando con HTML, CSS y JavaScript</p>
+      <h1 class="header__title">🌊 Proyecto Web Compartido</h1>
+      <p class="header__subtitle">Colaborando con HTML, CSS y JavaScript</p>
     </div>
   </header>
 
-  <nav class="navbar">
-    <ul>
-      <li><a href="#inicio" class="nav-link">Inicio</a></li>
-      <li><a href="#equipo" class="nav-link">Equipo</a></li>
-      <li><a href="#contacto" class="nav-link">Contacto</a></li>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li><a href="#inicio" class="nav__link">Inicio</a></li>
+      <li><a href="#equipo" class="nav__link">Equipo</a></li>
+      <li><a href="#contacto" class="nav__link">Contacto</a></li>
     </ul>
   </nav>
 
   <main class="container">
     <section id="inicio" class="hero">
-      <h2>Bienvenido 👋</h2>
-      <p>Este proyecto es una práctica colaborativa para crear una página web usando GitHub.</p>
-      <button onclick="mostrarMensaje()" class="btn-primary">Saludar</button>
-      <p id="mensaje" class="mensaje"></p>
+      <h2 class="hero__title">Bienvenido 👋</h2>
+      <p class="hero__description">Este proyecto es una práctica colaborativa para crear una página web usando GitHub.</p>
+      <button onclick="mostrarMensaje()" class="btn">Saludar</button>
+      <p id="mensaje" class="hero__message"></p>
     </section>
 
-    <section id="equipo" class="team-section">
-      <h2>Nuestro Equipo</h2>
-      <div class="cards">
-        <div class="card">
-          <div class="avatar">💻</div>
-          <h3>Juan</h3>
-          <p>Frontend Developer</p>
+    <section id="equipo" class="team">
+      <h2 class="team__title">Nuestro Equipo</h2>
+      <div class="team__grid">
+        <div class="team__card">
+          <div class="team__card-inner">
+            <div class="team__card-front">
+              <div class="team__emoji">🛠️</div>
+              <h3 class="team__name">Mateo</h3>
+              <p class="team__role">Desarrollador</p>
+            </div>
+            <div class="team__card-back">
+              <p class="team__bio">Mateo se enfoca en crear soluciones robustas y eficientes para el proyecto.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <div class="avatar">🛠️</div>
-          <h3>Ana</h3>
-          <p>Backend Developer</p>
-        </div>
-        <div class="card">
-          <div class="avatar">🎨</div>
-          <h3>Luisa</h3>
-          <p>Diseñadora</p>
+        <div class="team__card">
+          <div class="team__card-inner">
+            <div class="team__card-front">
+              <div class="team__emoji">🛠️</div>
+              <h3 class="team__name">Augusto</h3>
+              <p class="team__role">Desarrollador</p>
+            </div>
+            <div class="team__card-back">
+              <p class="team__bio">Augusto trabaja en el desarrollo y la implementación de funcionalidades clave.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contacto" class="contact-section">
-      <h2>Contacto</h2>
-      <form onsubmit="enviarFormulario(event)" class="contact-form">
-        <input type="text" placeholder="Tu nombre" required />
-        <input type="email" placeholder="Tu correo" required />
-        <textarea placeholder="Tu mensaje" required></textarea>
-        <button type="submit" class="btn-primary">Enviar</button>
+    <section id="contacto" class="contact">
+      <h2 class="contact__title">Contacto</h2>
+      <form onsubmit="enviarFormulario(event)" class="contact__form">
+        <input type="text" placeholder="Tu nombre" required class="contact__input" />
+        <input type="email" placeholder="Tu correo" required class="contact__input" />
+        <textarea placeholder="Tu mensaje" required class="contact__textarea"></textarea>
+        <button type="submit" class="btn">Enviar</button>
       </form>
     </section>
   </main>

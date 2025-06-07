@@ -1,11 +1,12 @@
-/* Variables de color */
 :root {
-  --azul-marino: #0b2545;
-  --negro: #000000;
-  --blanco: #ffffff;
-  --gris-claro: #f5f5f5;
-  --gris-medio: #333333;
-  --btn-hover: #144272;
+  --color-bg: #ffffff;
+  --color-primary: #0b2545;
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --color-gray: #333333;
+  --card-bg: #f5f5f5;
+  --hover: #144272;
+  --font-main: 'Roboto', sans-serif;
 }
 
 * {
@@ -14,9 +15,9 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--blanco);
-  color: var(--negro);
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+  font-family: var(--font-main);
   line-height: 1.6;
 }
 
@@ -28,204 +29,193 @@ body {
 
 /* Header */
 .header {
-  background-color: var(--azul-marino);
-  color: var(--blanco);
-  padding: 2rem 0;
   text-align: center;
+  padding: 2rem 0;
+  background-color: var(--color-primary);
+  color: var(--color-light);
   box-shadow: 0 4px 6px rgba(11, 37, 69, 0.5);
 }
 
-.header h1 {
-  margin: 0;
-  font-weight: 700;
+.header__title {
   font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
-.header p {
-  margin-top: 0.5rem;
-  font-weight: 400;
+.header__subtitle {
   font-size: 1.2rem;
+  font-weight: 400;
 }
 
-/* Navegación */
-.navbar {
-  background-color: var(--negro);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+/* Navigation */
+.nav {
+  background: var(--color-dark);
 }
 
-.navbar ul {
-  list-style: none;
+.nav__list {
   display: flex;
   justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 1rem 0;
   margin: 0;
-  padding: 0.75rem 0;
 }
 
-.navbar li {
-  margin: 0 1.5rem;
-}
-
-.navbar a {
-  color: var(--blanco);
+.nav__link {
+  color: var(--color-light);
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 
-.navbar a:hover,
-.navbar a:focus {
-  color: var(--azul-marino);
-  outline: none;
+.nav__link:hover {
+  color: var(--color-primary);
 }
 
-/* Sección Hero (Inicio) */
+/* Hero */
 .hero {
-  padding: 3rem 1rem;
   text-align: center;
-  background: linear-gradient(135deg, var(--azul-marino), var(--negro));
-  color: var(--blanco);
-  border-radius: 10px;
-  margin-bottom: 3rem;
-  box-shadow: 0 8px 15px rgba(11, 37, 69, 0.7);
+  margin: 3rem 0;
 }
 
-.hero h2 {
+.hero__title {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  color: var(--color-primary);
 }
 
-.hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+.hero__description {
+  margin: 1rem 0;
 }
 
-.btn-primary {
-  background-color: var(--blanco);
-  color: var(--azul-marino);
+.btn {
+  background: var(--color-primary);
+  color: var(--color-light);
   border: none;
-  padding: 0.75rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
-  background-color: var(--btn-hover);
-  color: var(--blanco);
-  outline: none;
+.btn:hover {
+  background: var(--hover);
 }
 
-/* Mensaje dinámico */
-.mensaje {
+/* Mensaje */
+.hero__message {
   margin-top: 1rem;
-  font-weight: 600;
   font-size: 1.1rem;
+  font-weight: 600;
 }
 
-/* Sección Equipo */
-.team-section {
-  margin-bottom: 3rem;
-}
-
-.team-section h2 {
+/* Team Section */
+.team__title {
   text-align: center;
-  color: var(--azul-marino);
-  font-weight: 700;
-  margin-bottom: 2rem;
   font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
 }
 
-.cards {
+.team__grid {
   display: flex;
   gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.card {
-  background-color: var(--gris-claro);
+.team__card {
+  perspective: 1000px;
+  width: 260px;
+  height: 200px;
+}
+
+.team__card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.team__card:hover .team__card-inner {
+  transform: rotateY(180deg) translateY(-10px);
+}
+
+.team__card-front,
+.team__card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: var(--card-bg);
+  color: var(--color-dark);
   border-radius: 15px;
-  padding: 1.5rem;
-  width: 250px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team__card-back {
+  transform: rotateY(180deg);
+}
+
+.team__name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.team__role {
+  font-size: 1rem;
+  color: var(--color-gray);
+  opacity: 0.8;
+}
+
+.team__bio {
+  font-size: 0.95rem;
   text-align: center;
-  transition: transform 0.3s ease;
+  color: var(--color-dark);
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
-}
-
-.avatar {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.card h3 {
-  margin: 0.5rem 0;
-  color: var(--azul-marino);
-  font-weight: 700;
-}
-
-.card p {
-  color: var(--gris-medio);
-  font-weight: 500;
-}
-
-/* Sección Contacto */
-.contact-section h2 {
+/* Contact */
+.contact__title {
   text-align: center;
-  color: var(--azul-marino);
-  font-weight: 700;
-  margin-bottom: 1.5rem;
   font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
 }
 
-.contact-form {
-  max-width: 500px;
-  margin: 0 auto;
+.contact__form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 0.8rem;
-  border: 1.5px solid var(--azul-marino);
+.contact__input,
+.contact__textarea {
+  padding: 0.75rem;
+  border: 1.5px solid var(--color-primary);
   border-radius: 8px;
   font-size: 1rem;
-  resize: vertical;
-  transition: border-color 0.3s ease;
+  color: var(--color-dark);
+  background-color: var(--color-bg);
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: var(--btn-hover);
-  outline: none;
-}
-
-.contact-form textarea {
+.contact__textarea {
   min-height: 100px;
-}
-
-.contact-form button {
-  align-self: center;
-  width: 120px;
 }
 
 /* Footer */
 .footer {
-  background-color: var(--azul-marino);
-  color: var(--blanco);
   text-align: center;
   padding: 1rem 0;
-  font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  color: #777;
   margin-top: 3rem;
 }

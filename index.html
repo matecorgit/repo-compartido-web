@@ -27,8 +27,12 @@
     <section id="inicio" class="hero">
       <h2 class="hero__title">Bienvenido 👋</h2>
       <p class="hero__description">Este proyecto es una práctica colaborativa para crear una página web usando GitHub</p>
-      <button onclick="mostrarMensaje()" class="btn">Saludar</button>
-      <p id="mensaje" class="hero__message"></p>
+      <button id="btnMensaje" class="btn" onclick="toggleMensaje()">Mensaje</button>
+      <div id="mensaje" class="hero__message" style="display: none;">
+        <span id="mensajeTexto"></span>
+      </div>
+
+
     </section>
 
     <section id="equipo" class="team">

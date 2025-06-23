@@ -102,12 +102,27 @@ body {
   background: var(--hover);
 }
 
-/* Mensaje */
+/* Mensajes */
 .hero__message {
   margin-top: 1rem;
   font-size: 1.1rem;
   font-weight: 600;
 }
+
+.btn--close {
+  background-color: transparent;
+  color: #007BFF;
+  border: none;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.btn--close:hover {
+  color: #0056b3;
+}
+
 
 /* Team Section */
 .team__title {

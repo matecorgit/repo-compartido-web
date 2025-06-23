@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ViajePlan - Calculadora de Viajes</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">ViajePlan</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#caracteristicas">Características</a>
+      <a href="#destinos">Destinos</a>
+      <a href="#presupuestos">Presupuestos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Calculadoras de Viajes</h1>
+      <h2>Planifica tu aventura con precisión</h2>
+      <p>Descubre cómo calcular los costos de tu próximo viaje de forma sencilla y elegante.</p>
+      <a href="#form-section" class="cta-button">Comenzar</a>
+    </section>
+    
+    <section id="caracteristicas" class="caracteristicas">
+      <h2>Características de la página</h2>
+      <p>ViajePlan ofrece herramientas avanzadas para planificar tu viaje, incluyendo cálculos precisos y opciones personalizadas. Con una interfaz intuitiva, puedes explorar destinos, gestionar presupuestos y obtener estimaciones detalladas de costos en tiempo real.</p>
+    </section>
+
+    <section id="destinos" class="caracteristicas">
+      <h2>Explora Destinos</h2>
+      <p>Descubre una amplia variedad de destinos alrededor del mundo con detalles sobre transporte y alojamiento. Desde las ciudades europeas como París y Roma hasta paraísos caribeños como Punta Cana, encuentra la información que necesitas para planificar tu próxima aventura.</p>
+    </section>
+
+    <section id="presupuestos" class="caracteristicas">
+      <h2>Gestión de Presupuestos</h2>
+      <p>Controla tus finanzas de viaje con estimaciones detalladas y consejos para optimizar tus gastos. Ajusta tus opciones de transporte y alojamiento para adaptarte a tu presupuesto y evita sorpresas con nuestras herramientas de cálculo precisas.</p>
+    </section>
+
+    <section id="form-section" class="form-section">
+      <form id="form-viaje">
+        <label for="origen">Origen:</label>
+        <input type="text" id="origen" required placeholder="Ingresá tu ciudad de origen" />
+
+        <label for="destino">Destino:</label>
+        <select id="destino" required>
+          <option value="" disabled selected>-- Seleccioná un destino --</option>
+        </select>
+
+        <label for="transporte">Transporte:</label>
+        <select id="transporte" required disabled>
+          <option value="" disabled selected>-- Seleccioná transporte --</option>
+        </select>
+
+        <label for="alojamiento">Alojamiento:</label>
+        <select id="alojamiento" required disabled>
+          <option value="" disabled selected>-- Seleccioná alojamiento --</option>
+        </select>
+
+        <label for="dias">Días de estadía:</label>
+        <input type="number" id="dias" min="1" value="7" required />
+
+        <button type="button" id="btnCalcular" disabled>Calcular costo total</button>
+      </form>
+
+      <div id="resultado" style="display:none;"></div>
+    </section>
+  </main>
+
+  <footer>
+    <nav>
+      <a href="#">Trabajos</a>
+      <a href="#">Acerca de</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
